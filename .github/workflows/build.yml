@@ -1,0 +1,21 @@
+name: Build and Test C++
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu_latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install g++
+      run: sudo apt update && sudo apt install g++ -y
+    - name: Compile C++ program
+      run: g++ hello.cpp -o hello
+    - name: Run the program
+      run: ./hello
+
