@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-	cout << "Hello from C++ running on Linux!" << endl;
+	cout << "Hello DevOps World! Version 2.0" << endl;
 	cout << "My user is:" << getenv("USER") << endl;
 
 	time_t now = time(0);
